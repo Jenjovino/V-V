@@ -1,31 +1,54 @@
-<h1>CRUD de Pessoas com Flask + Testes BDD</h1>
+# 🛠 ProjetoV&V - Gerenciamento de Pessoas
 
-<p>Este projeto é um sistema web de cadastro, listagem, edição e remoção de pessoas,
-desenvolvido com Flask e banco de dados SQLite, aplicando o ciclo completo de testes com
-Behavior-Driven Development (BDD) usando o Behave.</p>
+## 📌 Descrição
+Projeto para gerenciamento de cadastro, edição, listagem e remoção de pessoas usando Python, Flask e Behave para testes BDD.
 
-<h2>Funcionalidades</h2>
+## 🚀 Tecnologias Utilizadas
+- 🐍 Python
+- ⚡ Flask (Back-end)
+- 🧪 Behave (Testes BDD)
+- 📦 SQLite (Banco de Dados)
 
-✅ Cadastro de nova pessoa (com validações de nome, CPF e data)
+## 📂 Estrutura do Projeto
+```
+ProjetoV&V/
+│── app.py                # Arquivo principal do servidor Flask
+│── requirements.txt      # Dependências do projeto
+│── features/             # Testes BDD
+│   ├── cadastrar_pessoa.feature
+│   ├── editar_pessoa.feature
+│   ├── listar_pessoas.feature
+│   ├── remover_pessoa.feature
+│   ├── steps/            # Implementação dos testes
+│   │   ├── cadastro_steps.py
+│   │   ├── editar_steps.py
+│   │   ├── listar_steps.py
+│   │   ├── remover_steps.py
+│── static/               # Arquivos estáticos (CSS, JS)
+│── templates/            # Templates HTML
+│── database.db           # Banco de dados SQLite
+```
 
-📝 Edição de dados existentes
+## ⚙️ **Instalação**
+1️⃣ **Clone o repositório**:
+```bash
+git clone https://github.com/seu-usuario/ProjetoV&V.git
+cd ProjetoV&V
+```
 
-📄 Listagem de pessoas cadastradas
+2️⃣ **Instale as dependências**:
+```bash
+pip install -r requirements.txt
+```
 
-🗑 Remoção de registros
+3️⃣ **Inicie o servidor**:
+```bash
+python app.py
+```
 
-🧪 Testes BDD automatizados com Behave + Flask Test Client
+## 🧪 **Rodando os Testes**
+```bash
+python -m behave
+```
 
-<h2>Testes BDD (Behavior Driven Development)</h2>
-Os testes estão organizados por funcionalidade, usando a
-linguagem Gherkin para simular o comportamento real do usuário:
 
-📁 features/
-
-cadastrar: testes para criação com validações (nome vazio, CPF inválido, etc.)
-
-editar: testes para atualização com base em bugs reais identificados
-
-remover: testes para exclusão e tratamento de erro para ID inexistente
-
-ler: testes para visualização de registros e mensagem quando não houver dados
